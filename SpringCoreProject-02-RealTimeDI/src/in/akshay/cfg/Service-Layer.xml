@@ -6,10 +6,9 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
+<bean id="serviceLayer" class="in.akshay.service.StudentServiceImpl" >
+	<constructor-arg name="dao" ref="daoLayer"/>
+</bean>
 
-<import resource="Dao-Layer.xml"/>
-<import resource="Service-Layer.xml"/>
-<import resource="Controller-Layer.xml"/>
 
-<context:property-placeholder location="in/akshay/properties/Application.properties"/>
 </beans>
